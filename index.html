@@ -460,80 +460,62 @@ body {
 
 
 <!-- ══════════════════════════════════════════════════
-  SECTION 5 — Leader's Board (showcase with embed)
+  SECTION 5 — Leader's Board
+  Centered header · full-width prototype embed below
   ══════════════════════════════════════════════════ -->
-<section class="scene" data-label="Leader's Board" style="background: var(--bg-alt);">
-  <div class="wrap">
-    <div class="showcase">
-
-      <!-- Left: text column -->
-      <div>
-        <div class="scene-num">Leadership</div>
-        <p class="kick">Leader's Board</p>
-        <h2 class="showcase">Strategic visibility,<br>without changing the tool.</h2>
-        <p class="lead" style="opacity:1;transform:none">A dedicated surface for decision-makers — showing what gets automated, what gets protected, and what value is being generated across the supply chain.</p>
-
-        <div class="gest" style="margin-top:22px">
-          <div>
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="2 9 6 13 14 4"/>
-            </svg>
-            <span><strong style="color:var(--t)">Zero Touch rate</strong> — volume handled automatically, by zone and product family</span>
-          </div>
-          <div>
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="2 9 6 13 14 4"/>
-            </svg>
-            <span><strong style="color:var(--t)">Service rate protection</strong> — alerts caught and resolved before they escalate to stock-outs</span>
-          </div>
-          <div>
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="2 9 6 13 14 4"/>
-            </svg>
-            <span><strong style="color:var(--t)">AI decision log</strong> — every automated action, auditable in real time</span>
-          </div>
-          <div>
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="2 9 6 13 14 4"/>
-            </svg>
-            <span><strong style="color:var(--t)">Time recovered</strong> — planner effort redirected from routine to high-value decisions</span>
-          </div>
-        </div>
-
-        <div style="margin-top:8px">
-          <a href="https://z13cmeli.github.io/One-Augmented-Interface-audit/" target="_blank" class="cta-btn">
-            Open prototype
-            <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 7.5h9m-4-4 4 4-4 4"/>
-            </svg>
-          </a>
-        </div>
-
-        <p class="real-note" style="margin-top:16px">Complements the operational interface — does not replace it</p>
-      </div>
-
-      <!-- Right: browser mockup with embedded proto -->
-      <div>
-        <div class="rv-shell">
-          <div class="rv-chrome">
-            <div class="rv-dots">
-              <div class="rv-dot r"></div>
-              <div class="rv-dot y"></div>
-              <div class="rv-dot g"></div>
-            </div>
-            <div class="rv-url">https://z13cmeli.github.io/leaders-board/</div>
-          </div>
-          <iframe
-            src="https://z13cmeli.github.io/leaders-board/"
-            title="One Interface — Leader's Board prototype"
-            loading="lazy"
-            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
-          ></iframe>
-        </div>
-      </div>
-
+<section class="scene" data-label="Leader's Board" style="background:var(--bg-alt); justify-content:flex-start; padding-top:92px; padding-bottom:0;">
+ 
+  <!-- Centered text block -->
+  <div class="wrap" style="text-align:center;">
+    <div class="scene-num" style="display:inline-block;">Leadership</div>
+    <p class="kick" style="margin-top:4px;">Leader's Board</p>
+    <h2 style="font-size:40px; font-weight:800; letter-spacing:-1px; max-width:24ch; margin:0 auto 0;">Strategic visibility,<br>without changing the tool.</h2>
+    <p class="lead" style="opacity:1; transform:none; margin:16px auto 0; text-align:center;">A dedicated surface for decision-makers — showing what gets automated, what gets protected, and what value is being generated, in real time.</p>
+ 
+    <!-- Benefit pills row -->
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:28px;">
+      <span class="benefit-pill">Zero Touch rate</span>
+      <span class="benefit-pill">Service rate protection</span>
+      <span class="benefit-pill">AI decision log</span>
+      <span class="benefit-pill">Time recovered</span>
+    </div>
+ 
+    <!-- CTA -->
+    <div style="margin-top:28px; padding-bottom:56px;">
+      <a href="https://z13cmeli.github.io/One-Augmented-Interface-audit/" target="_blank" class="cta-btn" style="margin-top:0;">
+        Open prototype
+        <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 7.5h9m-4-4 4 4-4 4"/>
+        </svg>
+      </a>
     </div>
   </div>
+ 
+  <!-- Full-width browser mockup — breaks out of wrap -->
+  <div style="padding: 0 40px 72px;">
+    <div class="rv-shell">
+      <div class="rv-chrome">
+        <div class="rv-dots">
+          <div class="rv-dot r"></div>
+          <div class="rv-dot y"></div>
+          <div class="rv-dot g"></div>
+        </div>
+        <div class="rv-url">z13cmeli.github.io/One-Augmented-Interface-audit/</div>
+      </div>
+      <!-- Viewport scales iframe to 1440×1024 inside the container -->
+      <div class="proto-viewport" id="lbProtoViewport">
+        <iframe
+          id="lbProtoIframe"
+          src="https://z13cmeli.github.io/One-Augmented-Interface-audit/"
+          title="One Interface — Leader's Board prototype"
+          loading="lazy"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+          style="display:block; width:1440px; height:1024px; border:0; transform-origin:0 0;"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+ 
 </section>
 
 </body>
