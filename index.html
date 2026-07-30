@@ -208,6 +208,80 @@ body {
 
 /* ── Scene separator (for preview only) ── */
 .scene + .scene { border-top: 1px solid var(--border); }
+
+/* ── Showcase layout (text + browser mockup) ── */
+.showcase {
+  display: grid;
+  grid-template-columns: .62fr 1.38fr;
+  gap: 56px;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .showcase { grid-template-columns: 1fr; gap: 32px; }
+}
+.showcase h2 { font-size: 36px; letter-spacing: -1px; font-weight: 800; margin-bottom: 0; max-width: none; }
+.showcase .lead { font-size: 17px; margin-top: 14px; }
+
+/* ── Browser mockup ── */
+.rv-shell {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(16,16,16,.07), 0 12px 40px rgba(16,16,16,.1), 0 0 0 1px var(--border);
+  background: var(--bg);
+}
+.rv-chrome {
+  height: 36px;
+  background: #F5F4F5;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.rv-dots { display: flex; gap: 5px; }
+.rv-dot { width: 10px; height: 10px; border-radius: 50%; }
+.rv-dot.r { background: #FC605C; }
+.rv-dot.y { background: #FDBC40; }
+.rv-dot.g { background: #34C749; }
+.rv-url {
+  flex: 1; text-align: center; font-size: 11px; color: var(--tq);
+  font-family: monospace; background: #fff; border: 1px solid var(--border);
+  border-radius: 4px; padding: 2px 8px; max-width: 340px; margin: 0 auto;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.rv-shell iframe { display: block; width: 100%; height: 540px; border: 0; }
+
+/* ── CTA Button ── */
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 28px;
+  background: var(--c500); color: #fff;
+  font-size: 14px; font-weight: 700; letter-spacing: -.1px;
+  padding: 12px 22px; border-radius: var(--rf);
+  text-decoration: none; border: none; cursor: pointer;
+  transition: background .15s, transform .1s;
+}
+.cta-btn:hover { background: var(--c700); transform: translateY(-1px); }
+.cta-btn svg { width: 15px; height: 15px; }
+.cta-btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 12px; margin-left: 12px;
+  background: transparent; color: var(--c500);
+  font-size: 14px; font-weight: 700;
+  padding: 11px 22px; border-radius: var(--rf);
+  text-decoration: none; border: 2px solid var(--c050);
+  cursor: pointer; transition: border-color .15s;
+}
+.cta-btn-outline:hover { border-color: var(--c500); }
+
+/* ── Benefit pills ── */
+.benefit-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.benefit-pill {
+  background: var(--c050); color: var(--c700);
+  font-size: 12px; font-weight: 600;
+  padding: 5px 12px; border-radius: var(--rf);
+}
 </style>
 </head>
 <body>
@@ -380,6 +454,84 @@ body {
       </div>
 
       <p class="real-note" style="margin-top:24px">Proposed as a complementary surface — not a replacement for the operational interface</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+  SECTION 5 — Leader's Board (showcase with embed)
+  ══════════════════════════════════════════════════ -->
+<section class="scene" data-label="Leader's Board" style="background: var(--bg-alt);">
+  <div class="wrap">
+    <div class="showcase">
+
+      <!-- Left: text column -->
+      <div>
+        <div class="scene-num">Leadership</div>
+        <p class="kick">Leader's Board</p>
+        <h2 class="showcase">Strategic visibility,<br>without changing the tool.</h2>
+        <p class="lead" style="opacity:1;transform:none">A dedicated surface for decision-makers — showing what gets automated, what gets protected, and what value is being generated across the supply chain.</p>
+
+        <div class="gest" style="margin-top:22px">
+          <div>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="2 9 6 13 14 4"/>
+            </svg>
+            <span><strong style="color:var(--t)">Zero Touch rate</strong> — volume handled automatically, by zone and product family</span>
+          </div>
+          <div>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="2 9 6 13 14 4"/>
+            </svg>
+            <span><strong style="color:var(--t)">Service rate protection</strong> — alerts caught and resolved before they escalate to stock-outs</span>
+          </div>
+          <div>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="2 9 6 13 14 4"/>
+            </svg>
+            <span><strong style="color:var(--t)">AI decision log</strong> — every automated action, auditable in real time</span>
+          </div>
+          <div>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="2 9 6 13 14 4"/>
+            </svg>
+            <span><strong style="color:var(--t)">Time recovered</strong> — planner effort redirected from routine to high-value decisions</span>
+          </div>
+        </div>
+
+        <div style="margin-top:8px">
+          <a href="https://z13cmeli.github.io/One-Augmented-Interface-audit/" target="_blank" class="cta-btn">
+            Open prototype
+            <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 7.5h9m-4-4 4 4-4 4"/>
+            </svg>
+          </a>
+        </div>
+
+        <p class="real-note" style="margin-top:16px">Complements the operational interface — does not replace it</p>
+      </div>
+
+      <!-- Right: browser mockup with embedded proto -->
+      <div>
+        <div class="rv-shell">
+          <div class="rv-chrome">
+            <div class="rv-dots">
+              <div class="rv-dot r"></div>
+              <div class="rv-dot y"></div>
+              <div class="rv-dot g"></div>
+            </div>
+            <div class="rv-url">z13cmeli.github.io/One-Augmented-Interface-audit/</div>
+          </div>
+          <iframe
+            src="https://z13cmeli.github.io/One-Augmented-Interface-audit/"
+            title="One Interface — Leader's Board prototype"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+          ></iframe>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
